@@ -1,4 +1,8 @@
 import { useEffect } from "react";
+
+// COMPONENTS
+import SideBar from "./components/SideBar";
+import Header from "./components/Header";
 import "./App.css";
 
 function App() {
@@ -16,7 +20,21 @@ function App() {
     console.log(getData());
   }, []);
 
-  return <div className="App">Start Youtube clone!</div>;
+  return (
+    <>
+      <Header />
+      <SideBar />
+      <iframe
+        id="ytplayer"
+        type="text/html"
+        width="720"
+        height="405"
+        src="https://www.youtube.com/embed/_spuxXnul0U"
+        frameBorder="0"
+        allowFullScreen
+      ></iframe>
+    </>
+  );
 }
 
 export default App;
