@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+/* COLOR */
+$red : #FF0000;
+$black: #282828;
+$grey: #dddddd;
+$light_grey: #eeeeee;
+$blue: #0078AA;
+
+html, body{
+  margin: 0;
+  height: 100%;
+  font-family: 'YT Sans','Roboto', sans-serif, Arial;
+  color: $black;
+}
+
+*{
+  box-sizing: border-box;
+}
+
+button{
+  cursor: pointer;
+}
+
+/* HEADER */
+header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 55px;
+  border-bottom: 1px solid $grey;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+
+  h1{
+    margin-left: 60px;
+  }
+
+  .youtube_logo{
+    color: $red;
+    font-size: 25px;
+    margin: 0 5px 0 5px;
+  }
+  
+  .title{
+    cursor: pointer;
+    font-size: 23px;
+    font-weight: bold;
+    letter-spacing: -1.6px;
+  }
+
+  .user_info{
+    cursor: pointer;
+    font-size: 23px;
+
+    .ver_menu, .user_logo{
+      margin-right: 15px;
+    }
+
+    .user_logo{
+      color: $blue;
+    }
+  }
+
+  .search{
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    
+    .search_input{
+      width: 55%;
+      height: 35px;
+      border: 1px solid $grey;
+    }
+
+    button{
+      background-color: $light_grey;
+      border: 1px solid $grey;
+    }
+
+    button:hover{
+      background-color: $grey;
+    }
+
+    .search_btn{
+      width: 30px;
+      font-size: 18px;
+      padding: 3px;
+    }
+  }
+}
