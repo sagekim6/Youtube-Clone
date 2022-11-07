@@ -1,0 +1,26 @@
+@import "reset.css";
+
+/* COLOR */
+$red: #ff0000;
+$black: #282828;
+$grey: #dddddd;
+$light_grey: #eeeeee;
+$blue: #0078aa;
+
+html,
+body {
+  min-height: 100vh;
+  color: $black;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+/* ----------------------------------- */
+/*               Header                */
+/* ----------------------------------- */
+header {
+  display: flex;
+  justify-content: space-between;
+}

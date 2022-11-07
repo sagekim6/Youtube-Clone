@@ -1,14 +1,13 @@
 import { useEffect, useState } from "react";
 
 // COMPONENTS
-import SideBar from "./components/SideBar";
 import Header from "./components/Header";
-import Video from "./components/Video";
-import "./App.scss";
+import "./style/App.scss";
 
 function App() {
   const KEY = process.env.REACT_APP_YOUTUBE_API_KEY;
   const [data, setData] = useState([]);
+  const [thumbnails, setThumbnails] = useState([]); // 썸네일 default 이미지
 
   const getData = async () => {
     const res = await fetch(
@@ -21,15 +20,20 @@ function App() {
 
   useEffect(() => {
     getData();
+    console.log(data);
+    setThumbnails(data.map((el) => el.snippet.thumbnails.default));
   }, []);
 
   return (
     <>
       <Header />
-      <SideBar />
-      {data.map((it, i) => {
-        return <Video key={i} id={it.id} title={it.title} />;
-      })}
+      {data.map((el, i) => (
+        <div key={i}>
+          <img src={el.snippet.thumbnails.default.url} alt="thumbnail" />
+          <h2>{el.snippet.title}</h2>
+          <p>{el.snippet.channelTitle}</p>
+        </div>
+      ))}
     </>
   );
 }

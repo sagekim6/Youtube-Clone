@@ -1,4 +1,6 @@
-const Video = ({ id = [], title = [] }) => {
+const Video = ({ id = [] }) => {
+  // <iframe> elements must have a unique title property -> title 추가
+
   return (
     <>
       <iframe
@@ -6,8 +8,7 @@ const Video = ({ id = [], title = [] }) => {
         type="text/html"
         width="500"
         height="400"
-        title={title}
-        src={`https://www.youtube-nocookie.com/embed/${id}`}
+        src={`https://www.youtube.com/embed/${id}`}
         frameBorder="0"
         allowFullScreen
       ></iframe>
