@@ -12,18 +12,21 @@ const Header = () => {
       <header>
         <SideBar />
         <h1>
-          <FontAwesomeIcon icon={faYoutube} className="youtube_logo" />
-          <span className="title">YouTube</span>
+          <FontAwesomeIcon icon={faYoutube} className="Youtube_logo" />
+          <span className="Youtube">YouTube</span>
         </h1>
-        <div className="search">
-          <input type={"text"} placeholder="검색" className="search_input" />
+        <div className="Search">
+          <input type={"text"} placeholder="검색" className="Search_input" />
           <button title="검색">
-            <FontAwesomeIcon icon={faMagnifyingGlass} className="search_btn" />
+            <FontAwesomeIcon icon={faMagnifyingGlass} className="Search_btn" />
           </button>
         </div>
-        <div className="user_info">
-          <FontAwesomeIcon icon={faEllipsisVertical} className="ver_menu" />
-          <FontAwesomeIcon icon={faCircleUser} className="user_logo" />
+        <div className="User_info">
+          <FontAwesomeIcon
+            icon={faEllipsisVertical}
+            className="Vertical_menu"
+          />
+          <FontAwesomeIcon icon={faCircleUser} className="User_logo" />
         </div>
       </header>
     </>
